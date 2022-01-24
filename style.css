@@ -1,0 +1,103 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: Montserrat;
+  background: #695c85;
+}
+
+.card {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  z-index: 1;
+}
+
+.card__body {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 25px 0;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  transition: .5s;
+}
+
+.card__img {
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(0,0,0,.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: absolute;
+  bottom: 30px;
+  max-width: 280px;
+  width: 100%;
+  z-index: 1;
+  left: 10px;
+  border-radius: 10px;
+  transition: .5s;
+}
+
+.card__title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.card__text {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid #695c85;
+  color: #695c85;
+  font-size: 16px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: .5s;
+}
+
+.card__content {
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+}
+
+.card:hover .card__img {
+  bottom: 80%;
+}
+
+.card:hover .card__content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card:hover .card__body {
+  padding: 70px 25px 30px;
+}
+
+.btn:hover {
+  color: #fff;
+  background: #695c85;
+}
